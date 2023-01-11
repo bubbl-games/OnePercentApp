@@ -8,25 +8,59 @@
 import SwiftUI
 
 struct HomePageView: View {
+    @Binding var categories: [Category]
+    @Binding var values: [CategoryValue]
+    @Environment(\.scenePhase) private var scenePhase
+    @State private var isPresentingSetupPanel = false
+    
+    let saveAction: ()->Void
     var body: some View {
-        VStack {
-            Text("1% App")
-            NavigationLink(destination: SetupView()){
-                VStack {
-                    Text("Setup")
-                        .foregroundColor(.red)
+            VStack {
+                NavigationLink(destination: GraphsView()){
+                    MainButtonView(name: "Graphs", textColor: .red, backgroundColor: .yellow)
+                    
                 }
-                .padding()
-                .foregroundColor(.blue)
-                .background(.yellow)
+                NavigationLink(destination: UpdatesView(categories: $categories,
+                                                        values: $values)){
+                    MainButtonView(name: "Updates", textColor: .red, backgroundColor: .yellow)
+                    
+                }
             }
-            
-        }
+            .padding()
+            .navigationTitle("1%")
+            .toolbar {
+                Button(action: {
+                    isPresentingSetupPanel = true
+                }) {
+                    Image(systemName: "plus")
+                }
+                .accessibilityLabel("New Scrum")
+            }
+            .sheet(isPresented: $isPresentingSetupPanel) {
+                NavigationView {
+                    SetupView(categories: $categories)
+                        .toolbar {
+                            ToolbarItem(placement: .cancellationAction) {
+                                Button("Dismiss") {
+                                    isPresentingSetupPanel = false
+                                }
+                            }
+                            ToolbarItem(placement: .confirmationAction) {
+                                Button("Add") {
+                                    isPresentingSetupPanel = false
+                                }
+                            }
+                        }
+                }
+            }
+            .onChange(of: scenePhase) { phase in
+                if phase == .inactive { saveAction() }
+            }
     }
 }
 
 struct HomePageView_Previews: PreviewProvider {
     static var previews: some View {
-        HomePageView()
+        HomePageView(categories: .constant(Category.firstSample), values: .constant(Category.allDataValues), saveAction: {})
     }
 }

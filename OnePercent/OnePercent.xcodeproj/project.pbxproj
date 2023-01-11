@@ -21,6 +21,11 @@
 		47ECFF5D2967C6B500FDE50C /* Segment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ECFF5C2967C6B500FDE50C /* Segment.swift */; };
 		47ECFF5F2969D1B900FDE50C /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ECFF5E2969D1B900FDE50C /* HomePageView.swift */; };
 		47ECFF612969D2FA00FDE50C /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ECFF602969D2FA00FDE50C /* SetupView.swift */; };
+		47ECFF632969D49A00FDE50C /* MainButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ECFF622969D49A00FDE50C /* MainButtonView.swift */; };
+		47ECFF65296A620800FDE50C /* GraphsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ECFF64296A620800FDE50C /* GraphsView.swift */; };
+		47ECFF67296A647700FDE50C /* UpdatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ECFF66296A647700FDE50C /* UpdatesView.swift */; };
+		47ECFF69296B730E00FDE50C /* CategoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ECFF68296B730E00FDE50C /* CategoryStore.swift */; };
+		47ECFF6D296C523400FDE50C /* ValueStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ECFF6C296C523400FDE50C /* ValueStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +63,11 @@
 		47ECFF5C2967C6B500FDE50C /* Segment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segment.swift; sourceTree = "<group>"; };
 		47ECFF5E2969D1B900FDE50C /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
 		47ECFF602969D2FA00FDE50C /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
+		47ECFF622969D49A00FDE50C /* MainButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButtonView.swift; sourceTree = "<group>"; };
+		47ECFF64296A620800FDE50C /* GraphsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphsView.swift; sourceTree = "<group>"; };
+		47ECFF66296A647700FDE50C /* UpdatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesView.swift; sourceTree = "<group>"; };
+		47ECFF68296B730E00FDE50C /* CategoryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryStore.swift; sourceTree = "<group>"; };
+		47ECFF6C296C523400FDE50C /* ValueStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +102,8 @@
 				4769A346295E76CC0081D6E1 /* WeatherData.swift */,
 				47ECFF5A2967B91100FDE50C /* CategoryValue.swift */,
 				47ECFF5C2967C6B500FDE50C /* Segment.swift */,
+				47ECFF68296B730E00FDE50C /* CategoryStore.swift */,
+				47ECFF6C296C523400FDE50C /* ValueStore.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -121,7 +133,10 @@
 			children = (
 				479B39292956770700A394D4 /* OnePercentApp.swift */,
 				47ECFF5E2969D1B900FDE50C /* HomePageView.swift */,
+				47ECFF622969D49A00FDE50C /* MainButtonView.swift */,
 				47ECFF602969D2FA00FDE50C /* SetupView.swift */,
+				47ECFF64296A620800FDE50C /* GraphsView.swift */,
+				47ECFF66296A647700FDE50C /* UpdatesView.swift */,
 				479B392B2956770700A394D4 /* ContentView.swift */,
 				479B39532956786500A394D4 /* ViewController.swift */,
 				4769A343295E6FE70081D6E1 /* Models */,
@@ -287,12 +302,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				479B39542956786500A394D4 /* ViewController.swift in Sources */,
+				47ECFF69296B730E00FDE50C /* CategoryStore.swift in Sources */,
+				47ECFF65296A620800FDE50C /* GraphsView.swift in Sources */,
 				4769A347295E76CC0081D6E1 /* WeatherData.swift in Sources */,
 				479B392C2956770700A394D4 /* ContentView.swift in Sources */,
 				47ECFF5D2967C6B500FDE50C /* Segment.swift in Sources */,
 				47ECFF612969D2FA00FDE50C /* SetupView.swift in Sources */,
 				479B392A2956770700A394D4 /* OnePercentApp.swift in Sources */,
 				4769A345295E6FF70081D6E1 /* Category.swift in Sources */,
+				47ECFF632969D49A00FDE50C /* MainButtonView.swift in Sources */,
+				47ECFF67296A647700FDE50C /* UpdatesView.swift in Sources */,
+				47ECFF6D296C523400FDE50C /* ValueStore.swift in Sources */,
 				47ECFF5F2969D1B900FDE50C /* HomePageView.swift in Sources */,
 				47ECFF5B2967B91100FDE50C /* CategoryValue.swift in Sources */,
 			);

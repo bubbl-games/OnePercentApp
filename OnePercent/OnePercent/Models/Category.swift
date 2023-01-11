@@ -8,17 +8,13 @@
 import SwiftUI
 
 
-struct Category: Identifiable {
+struct Category: Identifiable, Codable {
     let id: UUID
     var name: String
-    var textColor: Color
-    var backgroundColor: Color
     
-    init(id: UUID = UUID(), name: String, textColor: Color, backgroundColor: Color) {
+    init(id: UUID = UUID(), name: String) {
         self.id = id
         self.name = name
-        self.textColor = textColor
-        self.backgroundColor = backgroundColor
     }
 }
 
@@ -88,19 +84,19 @@ extension Category {
 
     static let firstSample: [Category] =
     [
-        Category(name: "Technical Growth", textColor: Color.white, backgroundColor: Color(hex: 0x6184FF)),
-        Category(name: "Job", textColor: Color.white, backgroundColor: Color(hex: 0x6184FF)),
-        Category(name: "Diet", textColor: Color.white, backgroundColor: Color(hex: 0x6184FF)),
-        Category(name: "Exercise", textColor: Color.white, backgroundColor: Color.black),
-        Category(name: "Sleep", textColor: Color.white, backgroundColor: Color.black),
+        Category(name: "Technical Growth"),
+        Category(name: "Job"),
+        Category(name: "Diet"),
+        Category(name: "Exercise"),
+        Category(name: "Sleep")
     ]
     
     static let secondSample: [Category] =
     [
-        Category(name: "Mental", textColor: Color.white, backgroundColor: Color(hex: 0x6184FF)),
-        Category(name: "Julie", textColor: Color.white, backgroundColor: Color(hex: 0x6184FF)),
-        Category(name: "Social", textColor: Color.white, backgroundColor: Color(hex: 0x6184FF)),
-        Category(name: "Financial", textColor: Color.white, backgroundColor: Color(hex: 0x6184FF)),
-        Category(name: "Russian", textColor: Color.white, backgroundColor: Color.black)
+        Category(name: "Mental"),
+        Category(name: "Julie"),
+        Category(name: "Social"),
+        Category(name: "Financial"),
+        Category(name: "Russian")
     ]
 }
