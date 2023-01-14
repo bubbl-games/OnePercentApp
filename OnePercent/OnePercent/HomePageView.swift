@@ -16,15 +16,18 @@ struct HomePageView: View {
     let saveAction: ()->Void
     var body: some View {
             VStack {
-                NavigationLink(destination: GraphsView()){
-                    MainButtonView(name: "Graphs", textColor: .red, backgroundColor: .yellow)
-                    
-                }
-                NavigationLink(destination: UpdatesView(categories: $categories,
-                                                        values: $values)){
-                    MainButtonView(name: "Updates", textColor: .red, backgroundColor: .yellow)
-                    
-                }
+//                NavigationLink(destination: GraphsView(values: $values)){
+//                    MainButtonView(name: "Graphs", textColor: .red, backgroundColor: .yellow)
+//
+//                }
+//                NavigationLink(destination: UpdatesView(categories: $categories,
+//                                                        values: $values)){
+//                    MainButtonView(name: "Updates", textColor: .red, backgroundColor: .yellow)
+//
+//                }
+                Text("My Values")
+                GraphsView(values: $values)
+                UpdatesView(categories: $categories,                                            values: $values)
             }
             .padding()
             .navigationTitle("1%")

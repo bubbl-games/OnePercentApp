@@ -14,6 +14,7 @@ struct GreenButtonStyle: ButtonStyle {
             .background(configuration.isPressed ? Color.white : Color.green)
             .cornerRadius(6.0)
             .padding(20)
+            .frame(maxWidth: .infinity, alignment: .leading)
     }
 }
 
@@ -24,6 +25,19 @@ struct RedButtonStyle: ButtonStyle {
             .background(configuration.isPressed ? Color.white : Color.red)
             .cornerRadius(6.0)
             .padding(.trailing)
+            .frame(maxWidth: .infinity, alignment: .center)
+    }
+}
+
+struct BlackButtonStyle: ButtonStyle {
+    func makeBody(configuration: Self.Configuration) -> some View {
+        configuration.label
+            .foregroundColor(configuration.isPressed ? Color.black : Color.white)
+            .background(configuration.isPressed ? Color.white : Color.black)
+            .cornerRadius(6.0)
+            .padding(.trailing)
+            .frame(maxWidth: .infinity, alignment: .trailing)
+        
     }
 }
 
@@ -40,15 +54,17 @@ struct UpdatesView: View {
             ForEach(categories) { category in
                 let categoryValues = values.filter({category.name == $0.name})
                 VStack {
+                    Text(category.name)
+                        .frame(alignment: .center)
                     HStack {
-                        Text(category.name)
+                        
                         Button(action: {
                             values.append(createCategoryValue(
                                 categoryValues: categoryValues,
                                 categoryName: category.name,
                                 delta: 1))
                         }) {
-                            Text("Up")
+                            Image(systemName: "arrow.up.circle")
                                 .padding()
                         }
                         .buttonStyle(GreenButtonStyle())
@@ -58,7 +74,7 @@ struct UpdatesView: View {
                                 categoryName: category.name,
                                 delta: -1))
                         }) {
-                            Text("Down")
+                            Image(systemName: "arrow.down.circle")
                                 .padding()
                         }
                         .buttonStyle(RedButtonStyle())
@@ -68,11 +84,13 @@ struct UpdatesView: View {
                                 values.remove(at: index!)
                             }
                         }) {
-                            Text("Delete")
+                            
+                            Image(systemName: "x.circle")
                                 .padding()
                         }
-                        .buttonStyle(RedButtonStyle())
+                        .buttonStyle(BlackButtonStyle())
                     }
+                    .padding()
                     Text(getDescription(categoryValues: categoryValues, dateFormatter: dateFormatter))
                 }
             }
@@ -100,7 +118,7 @@ func getDescription (categoryValues: [CategoryValue], dateFormatter: DateFormatt
     var description = ""
     if (!categoryValues.isEmpty){
         let lastValue = categoryValues.last!
-        description = "Date: " + dateFormatter.string(from: lastValue.date) + " Value: " +  String(lastValue.value)
+        description = "Date: " + dateFormatter.string(from: lastValue.date) + " Value: " + String(format: "%0.2f",lastValue.value)
     }
     else {
         description = "No Data Yet"
