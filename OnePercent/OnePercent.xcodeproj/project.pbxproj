@@ -26,7 +26,6 @@
 		47ECFF67296A647700FDE50C /* UpdatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ECFF66296A647700FDE50C /* UpdatesView.swift */; };
 		47ECFF69296B730E00FDE50C /* CategoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ECFF68296B730E00FDE50C /* CategoryStore.swift */; };
 		47ECFF6D296C523400FDE50C /* ValueStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ECFF6C296C523400FDE50C /* ValueStore.swift */; };
-		47ECFF952970E9E900FDE50C /* OnePercentWatchApp Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 47ECFF722970E9E700FDE50C /* OnePercentWatchApp Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,27 +43,6 @@
 			remoteGlobalIDString = 479B39252956770700A394D4;
 			remoteInfo = OnePercent;
 		};
-		47ECFF822970E9E900FDE50C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 479B391E2956770700A394D4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 47ECFF712970E9E700FDE50C;
-			remoteInfo = "OnePercentWatchApp Watch App";
-		};
-		47ECFF8C2970E9E900FDE50C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 479B391E2956770700A394D4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 47ECFF712970E9E700FDE50C;
-			remoteInfo = "OnePercentWatchApp Watch App";
-		};
-		47ECFF932970E9E900FDE50C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 479B391E2956770700A394D4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 47ECFF712970E9E700FDE50C;
-			remoteInfo = "OnePercentWatchApp Watch App";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -74,7 +52,6 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				47ECFF952970E9E900FDE50C /* OnePercentWatchApp Watch App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,9 +81,6 @@
 		47ECFF66296A647700FDE50C /* UpdatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesView.swift; sourceTree = "<group>"; };
 		47ECFF68296B730E00FDE50C /* CategoryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryStore.swift; sourceTree = "<group>"; };
 		47ECFF6C296C523400FDE50C /* ValueStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueStore.swift; sourceTree = "<group>"; };
-		47ECFF722970E9E700FDE50C /* OnePercentWatchApp Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OnePercentWatchApp Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		47ECFF812970E9E800FDE50C /* OnePercentWatchApp Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OnePercentWatchApp Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		47ECFF8B2970E9E900FDE50C /* OnePercentWatchApp Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OnePercentWatchApp Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,27 +99,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		479B393D2956770800A394D4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		47ECFF6F2970E9E700FDE50C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		47ECFF7E2970E9E800FDE50C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		47ECFF882970E9E900FDE50C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -184,9 +137,6 @@
 				479B39262956770700A394D4 /* OnePercent.app */,
 				479B39362956770800A394D4 /* OnePercentTests.xctest */,
 				479B39402956770800A394D4 /* OnePercentUITests.xctest */,
-				47ECFF722970E9E700FDE50C /* OnePercentWatchApp Watch App.app */,
-				47ECFF812970E9E800FDE50C /* OnePercentWatchApp Watch AppTests.xctest */,
-				47ECFF8B2970E9E900FDE50C /* OnePercentWatchApp Watch AppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -249,7 +199,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				47ECFF942970E9E900FDE50C /* PBXTargetDependency */,
 			);
 			name = OnePercent;
 			productName = OnePercent;
@@ -292,59 +241,6 @@
 			productReference = 479B39402956770800A394D4 /* OnePercentUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		47ECFF712970E9E700FDE50C /* OnePercentWatchApp Watch App */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 47ECFF9D2970E9E900FDE50C /* Build configuration list for PBXNativeTarget "OnePercentWatchApp Watch App" */;
-			buildPhases = (
-				47ECFF6E2970E9E700FDE50C /* Sources */,
-				47ECFF6F2970E9E700FDE50C /* Frameworks */,
-				47ECFF702970E9E700FDE50C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "OnePercentWatchApp Watch App";
-			productName = "OnePercentWatchApp Watch App";
-			productReference = 47ECFF722970E9E700FDE50C /* OnePercentWatchApp Watch App.app */;
-			productType = "com.apple.product-type.application";
-		};
-		47ECFF802970E9E800FDE50C /* OnePercentWatchApp Watch AppTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 47ECFF9E2970E9E900FDE50C /* Build configuration list for PBXNativeTarget "OnePercentWatchApp Watch AppTests" */;
-			buildPhases = (
-				47ECFF7D2970E9E800FDE50C /* Sources */,
-				47ECFF7E2970E9E800FDE50C /* Frameworks */,
-				47ECFF7F2970E9E800FDE50C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				47ECFF832970E9E900FDE50C /* PBXTargetDependency */,
-			);
-			name = "OnePercentWatchApp Watch AppTests";
-			productName = "OnePercentWatchApp Watch AppTests";
-			productReference = 47ECFF812970E9E800FDE50C /* OnePercentWatchApp Watch AppTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		47ECFF8A2970E9E900FDE50C /* OnePercentWatchApp Watch AppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 47ECFF9F2970E9E900FDE50C /* Build configuration list for PBXNativeTarget "OnePercentWatchApp Watch AppUITests" */;
-			buildPhases = (
-				47ECFF872970E9E900FDE50C /* Sources */,
-				47ECFF882970E9E900FDE50C /* Frameworks */,
-				47ECFF892970E9E900FDE50C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				47ECFF8D2970E9E900FDE50C /* PBXTargetDependency */,
-			);
-			name = "OnePercentWatchApp Watch AppUITests";
-			productName = "OnePercentWatchApp Watch AppUITests";
-			productReference = 47ECFF8B2970E9E900FDE50C /* OnePercentWatchApp Watch AppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -366,17 +262,6 @@
 						CreatedOnToolsVersion = 14.2;
 						TestTargetID = 479B39252956770700A394D4;
 					};
-					47ECFF712970E9E700FDE50C = {
-						CreatedOnToolsVersion = 14.2;
-					};
-					47ECFF802970E9E800FDE50C = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = 47ECFF712970E9E700FDE50C;
-					};
-					47ECFF8A2970E9E900FDE50C = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = 47ECFF712970E9E700FDE50C;
-					};
 				};
 			};
 			buildConfigurationList = 479B39212956770700A394D4 /* Build configuration list for PBXProject "OnePercent" */;
@@ -395,9 +280,6 @@
 				479B39252956770700A394D4 /* OnePercent */,
 				479B39352956770800A394D4 /* OnePercentTests */,
 				479B393F2956770800A394D4 /* OnePercentUITests */,
-				47ECFF712970E9E700FDE50C /* OnePercentWatchApp Watch App */,
-				47ECFF802970E9E800FDE50C /* OnePercentWatchApp Watch AppTests */,
-				47ECFF8A2970E9E900FDE50C /* OnePercentWatchApp Watch AppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -420,27 +302,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		479B393E2956770800A394D4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		47ECFF702970E9E700FDE50C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		47ECFF7F2970E9E800FDE50C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		47ECFF892970E9E900FDE50C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -488,27 +349,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		47ECFF6E2970E9E700FDE50C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		47ECFF7D2970E9E800FDE50C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		47ECFF872970E9E900FDE50C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -521,21 +361,6 @@
 			isa = PBXTargetDependency;
 			target = 479B39252956770700A394D4 /* OnePercent */;
 			targetProxy = 479B39412956770800A394D4 /* PBXContainerItemProxy */;
-		};
-		47ECFF832970E9E900FDE50C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 47ECFF712970E9E700FDE50C /* OnePercentWatchApp Watch App */;
-			targetProxy = 47ECFF822970E9E900FDE50C /* PBXContainerItemProxy */;
-		};
-		47ECFF8D2970E9E900FDE50C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 47ECFF712970E9E700FDE50C /* OnePercentWatchApp Watch App */;
-			targetProxy = 47ECFF8C2970E9E900FDE50C /* PBXContainerItemProxy */;
-		};
-		47ECFF942970E9E900FDE50C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 47ECFF712970E9E700FDE50C /* OnePercentWatchApp Watch App */;
-			targetProxy = 47ECFF932970E9E900FDE50C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -788,144 +613,6 @@
 			};
 			name = Release;
 		};
-		47ECFF972970E9E900FDE50C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"OnePercentWatchApp Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = P43NT6N9G9;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = OnePercentWatchApp;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = AndyBeers.OnePercent;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = AndyBeers.OnePercent.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 9.1;
-			};
-			name = Debug;
-		};
-		47ECFF982970E9E900FDE50C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"OnePercentWatchApp Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = P43NT6N9G9;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = OnePercentWatchApp;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = AndyBeers.OnePercent;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = AndyBeers.OnePercent.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 9.1;
-			};
-			name = Release;
-		};
-		47ECFF992970E9E900FDE50C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = P43NT6N9G9;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "AndyBeers.OnePercentWatchApp-Watch-AppTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OnePercentWatchApp Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/OnePercentWatchApp Watch App";
-				WATCHOS_DEPLOYMENT_TARGET = 9.1;
-			};
-			name = Debug;
-		};
-		47ECFF9A2970E9E900FDE50C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = P43NT6N9G9;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "AndyBeers.OnePercentWatchApp-Watch-AppTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OnePercentWatchApp Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/OnePercentWatchApp Watch App";
-				WATCHOS_DEPLOYMENT_TARGET = 9.1;
-			};
-			name = Release;
-		};
-		47ECFF9B2970E9E900FDE50C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = P43NT6N9G9;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "AndyBeers.OnePercentWatchApp-Watch-AppUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_TARGET_NAME = "OnePercentWatchApp Watch App";
-				WATCHOS_DEPLOYMENT_TARGET = 9.1;
-			};
-			name = Debug;
-		};
-		47ECFF9C2970E9E900FDE50C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = P43NT6N9G9;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "AndyBeers.OnePercentWatchApp-Watch-AppUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_TARGET_NAME = "OnePercentWatchApp Watch App";
-				WATCHOS_DEPLOYMENT_TARGET = 9.1;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -961,33 +648,6 @@
 			buildConfigurations = (
 				479B39512956770800A394D4 /* Debug */,
 				479B39522956770800A394D4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		47ECFF9D2970E9E900FDE50C /* Build configuration list for PBXNativeTarget "OnePercentWatchApp Watch App" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				47ECFF972970E9E900FDE50C /* Debug */,
-				47ECFF982970E9E900FDE50C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		47ECFF9E2970E9E900FDE50C /* Build configuration list for PBXNativeTarget "OnePercentWatchApp Watch AppTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				47ECFF992970E9E900FDE50C /* Debug */,
-				47ECFF9A2970E9E900FDE50C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		47ECFF9F2970E9E900FDE50C /* Build configuration list for PBXNativeTarget "OnePercentWatchApp Watch AppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				47ECFF9B2970E9E900FDE50C /* Debug */,
-				47ECFF9C2970E9E900FDE50C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
