@@ -10,7 +10,7 @@ import Charts
 
 struct GraphsView: View {
     
-    @Binding var values: [CategoryValue]
+    var values: [CategoryValue]
     
     var body: some View {
         if (values.count > 0){
@@ -36,6 +36,6 @@ struct GraphsView: View {
 
 struct GraphsView_Previews: PreviewProvider {
     static var previews: some View {
-        GraphsView(values: .constant(Category.allDataValues))
+        GraphsView(values: Category.allDataValues)
     }
 }

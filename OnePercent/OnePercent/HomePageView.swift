@@ -12,22 +12,58 @@ struct HomePageView: View {
     @Binding var values: [CategoryValue]
     @Environment(\.scenePhase) private var scenePhase
     @State private var isPresentingSetupPanel = false
-    
+    @State private var lastDateOfInterest = Date(timeIntervalSince1970: 0)
     let saveAction: ()->Void
     var body: some View {
             VStack {
-//                NavigationLink(destination: GraphsView(values: $values)){
-//                    MainButtonView(name: "Graphs", textColor: .red, backgroundColor: .yellow)
-//
-//                }
-//                NavigationLink(destination: UpdatesView(categories: $categories,
-//                                                        values: $values)){
-//                    MainButtonView(name: "Updates", textColor: .red, backgroundColor: .yellow)
-//
-//                }
                 Text("My Values")
-                GraphsView(values: $values)
-                UpdatesView(categories: $categories,                                            values: $values)
+                HStack {
+                    
+                    Button(action: {
+                        lastDateOfInterest = Calendar.current.date(byAdding: .day, value: -7, to: Date())!
+                    }) {
+                        Text("1W")
+                            .padding()
+                    }
+                    .buttonStyle(BlackButtonStyle())
+                    Button(action: {
+                        lastDateOfInterest = Calendar.current.date(byAdding: .month, value: -1, to: Date())!
+                    }) {
+                        Text("1M")
+                            .padding()
+                    }
+                    .buttonStyle(BlackButtonStyle())
+                    Button(action: {
+                        lastDateOfInterest = Calendar.current.date(byAdding: .month, value: -3, to: Date())!
+                    }) {
+                        
+                        Text("1Q")
+                            .padding()
+                    }
+                    .buttonStyle(BlackButtonStyle())
+                    Button(action: {
+                        lastDateOfInterest = Calendar.current.date(byAdding: .year, value: -1, to: Date())!
+                    }) {
+                        
+                        Text("1Y")
+                            .padding()
+                    }
+                    .buttonStyle(BlackButtonStyle())
+                    Button(action: {
+                        lastDateOfInterest = Date(timeIntervalSince1970: 0)
+                    }) {
+                        
+                        Text("All")
+                            .padding()
+                    }
+                    .buttonStyle(BlackButtonStyle())
+                }
+                .padding()
+                GraphsView(values: getValuesAfterDateOfInterest(
+                    categoryValues: values,
+                    lastDateOfInterest: lastDateOfInterest))
+                UpdatesView(categories: $categories,
+                            values: $values)
             }
             .padding()
             .navigationTitle("1%")
@@ -62,8 +98,18 @@ struct HomePageView: View {
     }
 }
 
+func getDurationButtonStyle(lastDateOfInterest: Date, myDate: Date) -> any ButtonStyle {
+    return lastDateOfInterest == myDate ? GreenButtonStyle() : BlackButtonStyle()
+}
+
+func getValuesAfterDateOfInterest (categoryValues: [CategoryValue], lastDateOfInterest: Date) -> [CategoryValue] {
+    return categoryValues.filter({lastDateOfInterest <= $0.date})
+}
+
 struct HomePageView_Previews: PreviewProvider {
     static var previews: some View {
-        HomePageView(categories: .constant(Category.firstSample), values: .constant(Category.allDataValues), saveAction: {})
+        HomePageView(categories: .constant(Category.firstSample),
+                     values: .constant(Category.allDataValues),
+                     saveAction: {})
     }
 }
