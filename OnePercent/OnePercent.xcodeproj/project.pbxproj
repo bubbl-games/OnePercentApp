@@ -26,13 +26,6 @@
 		47ECFF67296A647700FDE50C /* UpdatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ECFF66296A647700FDE50C /* UpdatesView.swift */; };
 		47ECFF69296B730E00FDE50C /* CategoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ECFF68296B730E00FDE50C /* CategoryStore.swift */; };
 		47ECFF6D296C523400FDE50C /* ValueStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ECFF6C296C523400FDE50C /* ValueStore.swift */; };
-		47ECFF752970E9E700FDE50C /* OnePercentWatchAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ECFF742970E9E700FDE50C /* OnePercentWatchAppApp.swift */; };
-		47ECFF772970E9E700FDE50C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ECFF762970E9E700FDE50C /* ContentView.swift */; };
-		47ECFF792970E9E800FDE50C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47ECFF782970E9E800FDE50C /* Assets.xcassets */; };
-		47ECFF7C2970E9E800FDE50C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47ECFF7B2970E9E800FDE50C /* Preview Assets.xcassets */; };
-		47ECFF862970E9E900FDE50C /* OnePercentWatchApp_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ECFF852970E9E900FDE50C /* OnePercentWatchApp_Watch_AppTests.swift */; };
-		47ECFF902970E9E900FDE50C /* OnePercentWatchApp_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ECFF8F2970E9E900FDE50C /* OnePercentWatchApp_Watch_AppUITests.swift */; };
-		47ECFF922970E9E900FDE50C /* OnePercentWatchApp_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ECFF912970E9E900FDE50C /* OnePercentWatchApp_Watch_AppUITestsLaunchTests.swift */; };
 		47ECFF952970E9E900FDE50C /* OnePercentWatchApp Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 47ECFF722970E9E700FDE50C /* OnePercentWatchApp Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
@@ -112,15 +105,8 @@
 		47ECFF68296B730E00FDE50C /* CategoryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryStore.swift; sourceTree = "<group>"; };
 		47ECFF6C296C523400FDE50C /* ValueStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueStore.swift; sourceTree = "<group>"; };
 		47ECFF722970E9E700FDE50C /* OnePercentWatchApp Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OnePercentWatchApp Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		47ECFF742970E9E700FDE50C /* OnePercentWatchAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnePercentWatchAppApp.swift; sourceTree = "<group>"; };
-		47ECFF762970E9E700FDE50C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		47ECFF782970E9E800FDE50C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		47ECFF7B2970E9E800FDE50C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		47ECFF812970E9E800FDE50C /* OnePercentWatchApp Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OnePercentWatchApp Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		47ECFF852970E9E900FDE50C /* OnePercentWatchApp_Watch_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnePercentWatchApp_Watch_AppTests.swift; sourceTree = "<group>"; };
 		47ECFF8B2970E9E900FDE50C /* OnePercentWatchApp Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OnePercentWatchApp Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		47ECFF8F2970E9E900FDE50C /* OnePercentWatchApp_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnePercentWatchApp_Watch_AppUITests.swift; sourceTree = "<group>"; };
-		47ECFF912970E9E900FDE50C /* OnePercentWatchApp_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnePercentWatchApp_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,9 +174,6 @@
 				479B39282956770700A394D4 /* OnePercent */,
 				479B39392956770800A394D4 /* OnePercentTests */,
 				479B39432956770800A394D4 /* OnePercentUITests */,
-				47ECFF732970E9E700FDE50C /* OnePercentWatchApp Watch App */,
-				47ECFF842970E9E900FDE50C /* OnePercentWatchApp Watch AppTests */,
-				47ECFF8E2970E9E900FDE50C /* OnePercentWatchApp Watch AppUITests */,
 				479B39272956770700A394D4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -249,42 +232,6 @@
 				479B39462956770800A394D4 /* OnePercentUITestsLaunchTests.swift */,
 			);
 			path = OnePercentUITests;
-			sourceTree = "<group>";
-		};
-		47ECFF732970E9E700FDE50C /* OnePercentWatchApp Watch App */ = {
-			isa = PBXGroup;
-			children = (
-				47ECFF742970E9E700FDE50C /* OnePercentWatchAppApp.swift */,
-				47ECFF762970E9E700FDE50C /* ContentView.swift */,
-				47ECFF782970E9E800FDE50C /* Assets.xcassets */,
-				47ECFF7A2970E9E800FDE50C /* Preview Content */,
-			);
-			path = "OnePercentWatchApp Watch App";
-			sourceTree = "<group>";
-		};
-		47ECFF7A2970E9E800FDE50C /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				47ECFF7B2970E9E800FDE50C /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		47ECFF842970E9E900FDE50C /* OnePercentWatchApp Watch AppTests */ = {
-			isa = PBXGroup;
-			children = (
-				47ECFF852970E9E900FDE50C /* OnePercentWatchApp_Watch_AppTests.swift */,
-			);
-			path = "OnePercentWatchApp Watch AppTests";
-			sourceTree = "<group>";
-		};
-		47ECFF8E2970E9E900FDE50C /* OnePercentWatchApp Watch AppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				47ECFF8F2970E9E900FDE50C /* OnePercentWatchApp_Watch_AppUITests.swift */,
-				47ECFF912970E9E900FDE50C /* OnePercentWatchApp_Watch_AppUITestsLaunchTests.swift */,
-			);
-			path = "OnePercentWatchApp Watch AppUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -483,8 +430,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47ECFF7C2970E9E800FDE50C /* Preview Assets.xcassets in Resources */,
-				47ECFF792970E9E800FDE50C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,8 +492,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47ECFF772970E9E700FDE50C /* ContentView.swift in Sources */,
-				47ECFF752970E9E700FDE50C /* OnePercentWatchAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,7 +499,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47ECFF862970E9E900FDE50C /* OnePercentWatchApp_Watch_AppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,8 +506,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47ECFF902970E9E900FDE50C /* OnePercentWatchApp_Watch_AppUITests.swift in Sources */,
-				47ECFF922970E9E900FDE50C /* OnePercentWatchApp_Watch_AppUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -717,7 +657,6 @@
 		479B394B2956770800A394D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -747,7 +686,6 @@
 		479B394C2956770800A394D4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -913,7 +851,6 @@
 		47ECFF992970E9E900FDE50C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -934,7 +871,6 @@
 		47ECFF9A2970E9E900FDE50C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -955,7 +891,6 @@
 		47ECFF9B2970E9E900FDE50C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P43NT6N9G9;
@@ -975,7 +910,6 @@
 		47ECFF9C2970E9E900FDE50C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P43NT6N9G9;
