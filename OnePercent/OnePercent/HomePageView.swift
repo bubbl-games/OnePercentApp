@@ -16,21 +16,21 @@ struct HomePageView: View {
     let saveAction: ()->Void
     var body: some View {
             VStack {
-                Text("My Values")
                 HStack {
-                    
                     Button(action: {
                         lastDateOfInterest = Calendar.current.date(byAdding: .day, value: -7, to: Date())!
                     }) {
                         Text("1W")
-                            .padding()
+                            .padding(2)
+                            .frame(minWidth: 50)
                     }
                     .buttonStyle(BlackButtonStyle())
                     Button(action: {
                         lastDateOfInterest = Calendar.current.date(byAdding: .month, value: -1, to: Date())!
                     }) {
                         Text("1M")
-                            .padding()
+                            .padding(2)
+                            .frame(minWidth: 50)
                     }
                     .buttonStyle(BlackButtonStyle())
                     Button(action: {
@@ -38,7 +38,8 @@ struct HomePageView: View {
                     }) {
                         
                         Text("1Q")
-                            .padding()
+                            .padding(2)
+                            .frame(minWidth: 50)
                     }
                     .buttonStyle(BlackButtonStyle())
                     Button(action: {
@@ -46,7 +47,8 @@ struct HomePageView: View {
                     }) {
                         
                         Text("1Y")
-                            .padding()
+                            .padding(2)
+                            .frame(minWidth: 50)
                     }
                     .buttonStyle(BlackButtonStyle())
                     Button(action: {
@@ -54,7 +56,8 @@ struct HomePageView: View {
                     }) {
                         
                         Text("All")
-                            .padding()
+                            .padding(2)
+                            .frame(minWidth: 50)
                     }
                     .buttonStyle(BlackButtonStyle())
                 }
@@ -62,7 +65,7 @@ struct HomePageView: View {
                 GraphsView(values: getValuesAfterDateOfInterest(
                     categoryValues: values,
                     lastDateOfInterest: lastDateOfInterest))
-                UpdatesView(categories: $categories,
+                OldUpdatesView(categories: $categories,
                             values: $values)
             }
             .padding()

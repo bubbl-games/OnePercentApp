@@ -13,8 +13,8 @@ struct GreenButtonStyle: ButtonStyle {
             .foregroundColor(configuration.isPressed ? Color.green : Color.white)
             .background(configuration.isPressed ? Color.white : Color.green)
             .cornerRadius(6.0)
-            .padding(20)
-            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(.trailing, 2)
+            .frame(maxWidth: 30, alignment: .leading)
     }
 }
 
@@ -24,8 +24,8 @@ struct RedButtonStyle: ButtonStyle {
             .foregroundColor(configuration.isPressed ? Color.red : Color.white)
             .background(configuration.isPressed ? Color.white : Color.red)
             .cornerRadius(6.0)
-            .padding(.trailing)
-            .frame(maxWidth: .infinity, alignment: .center)
+            .padding(.trailing,2)
+            .frame(maxWidth: 30, alignment: .center)
     }
 }
 
@@ -35,13 +35,12 @@ struct BlackButtonStyle: ButtonStyle {
             .foregroundColor(configuration.isPressed ? Color.black : Color.white)
             .background(configuration.isPressed ? Color.white : Color.black)
             .cornerRadius(6.0)
-            .padding(.trailing)
-            .frame(maxWidth: .infinity, alignment: .trailing)
-        
+            .frame(maxWidth: 30, alignment: .trailing)
+            .padding(.trailing,2)
     }
 }
 
-struct UpdatesView: View {
+struct OldUpdatesView: View {
     @Binding var categories: [Category]
     @Binding var values: [CategoryValue]
     var dateFormatter = DateFormatter()
@@ -54,10 +53,10 @@ struct UpdatesView: View {
             ForEach(categories) { category in
                 let categoryValues = values.filter({category.name == $0.name})
                 VStack {
-                    Text(category.name)
-                        .frame(alignment: .center)
+                    
                     HStack {
-                        
+                        Text(category.name)
+                            .frame(alignment: .leading)
                         Button(action: {
                             values.append(createCategoryValue(
                                 categoryValues: categoryValues,
@@ -65,9 +64,10 @@ struct UpdatesView: View {
                                 delta: 1))
                         }) {
                             Image(systemName: "arrow.up.circle")
-                                .padding()
+                                .padding(5)
                         }
                         .buttonStyle(GreenButtonStyle())
+                        .padding(.trailing, 2)
                         Button(action: {
                             values.append(createCategoryValue(
                                 categoryValues: categoryValues,
@@ -75,9 +75,10 @@ struct UpdatesView: View {
                                 delta: -1))
                         }) {
                             Image(systemName: "arrow.down.circle")
-                                .padding()
+                                .padding(5)
                         }
                         .buttonStyle(RedButtonStyle())
+                        .padding(.trailing, 2)
                         Button(action: {
                             if (categoryValues.count > 0){
                                 let index = values.firstIndex(of: categoryValues.last!)
@@ -86,11 +87,12 @@ struct UpdatesView: View {
                         }) {
                             
                             Image(systemName: "x.circle")
-                                .padding()
+                                .padding(5)
                         }
                         .buttonStyle(BlackButtonStyle())
+                        
                     }
-                    .padding()
+                    .frame(width: 350, alignment: .trailing)
                     Text(getDescription(categoryValues: categoryValues, dateFormatter: dateFormatter))
                 }
             }
@@ -130,8 +132,8 @@ func getDescription (categoryValues: [CategoryValue], dateFormatter: DateFormatt
 
 
 
-struct UpdatesView_Previews: PreviewProvider {
+struct OldUpdatesView_Previews: PreviewProvider {
     static var previews: some View {
-        UpdatesView(categories: .constant(Category.firstSample), values: .constant(Category.allDataValues))
+        OldUpdatesView(categories: .constant(Category.firstSample), values: .constant(Category.allDataValues))
     }
 }
