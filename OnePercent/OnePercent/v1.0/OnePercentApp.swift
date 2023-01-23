@@ -18,7 +18,7 @@ struct OnePercentApp: App {
         WindowGroup {
             VStack {
                 if (viewType == 1){
-                    CategoriesView()
+                    CategoriesView(categories: [])
                 }
                 else if (viewType == 2){
                     UpdatesView()
