@@ -19,12 +19,13 @@ struct CategoriesView: View {
                         .font(.headline)
                 }
                 else{
-                    VStack {
+                    List {
                         ForEach(categories) { category in
                             CategoryCardView(category: category)
-                                .background(category.theme.mainColor)
                         }
+                        .onMove(perform: move)
                     }
+                    .environment(\.editMode, Binding.constant(EditMode.active))
                 }
             }
             .toolbar {
@@ -37,10 +38,17 @@ struct CategoriesView: View {
             .sheet(isPresented: $isShowingEditSheet) {
                 CategoryAddEditView(categories: $categories, isShowingEditSheet: $isShowingEditSheet)
             }
+            
         }
         
     }
+    
+    func move(from source: IndexSet, to destination: Int) {
+         categories.move(fromOffsets: source, toOffset: destination)
+     }
 }
+
+
 
 
 struct CategoriesView_Previews: PreviewProvider {

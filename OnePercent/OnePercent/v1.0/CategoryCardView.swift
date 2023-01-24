@@ -13,20 +13,17 @@ struct CategoryCardView: View {
     
     var body: some View {
         HStack{
-            Label("", systemImage: "text.justify")
-                .padding()
-            Spacer()
+            Label("", systemImage: "pencil")
             VStack {
                 Text("Name: " + category.name)
                 Text("Color: " + category.theme.name)
             }
             Spacer()
-            Label("", systemImage: "pencil")
-                .padding()
         }
+        .cornerRadius(5)
+        .padding(2)
         .foregroundColor(category.theme.accentColor)
         .background(category.theme.mainColor)
-       
     }
 }
 
