@@ -11,10 +11,17 @@ import SwiftUI
 struct Category: Identifiable, Codable {
     let id: UUID
     var name: String
+    var theme: Theme
     
-    init(id: UUID = UUID(), name: String) {
+    init(id: UUID = UUID(), name: String, theme: Theme) {
         self.id = id
         self.name = name
+        self.theme = theme
+    }
+    
+    mutating func update(from category: Category) {
+        name = category.name
+        theme = category.theme
     }
 }
 
@@ -84,19 +91,19 @@ extension Category {
 
     static let firstSample: [Category] =
     [
-        Category(name: "Technical Growth"),
-        Category(name: "Job"),
-        Category(name: "Diet"),
-        Category(name: "Exercise"),
-        Category(name: "Sleep")
+        Category(name: "Technical Growth", theme: .green),
+        Category(name: "Job", theme:.red),
+        Category(name: "Diet", theme:.cyan),
+        Category(name: "Exercise", theme:.orange),
+        Category(name: "Sleep", theme:.purple)
     ]
     
     static let secondSample: [Category] =
     [
-        Category(name: "Mental"),
-        Category(name: "Julie"),
-        Category(name: "Social"),
-        Category(name: "Financial"),
-        Category(name: "Russian")
+        Category(name: "Mental", theme:.pink),
+        Category(name: "Julie", theme:.yellow),
+        Category(name: "Social", theme:.indigo),
+        Category(name: "Financial", theme:.blue),
+        Category(name: "Russian", theme:.gray)
     ]
 }

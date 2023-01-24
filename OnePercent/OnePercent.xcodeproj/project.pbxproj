@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		470FADBA297F205100D904CC /* CategoryAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470FADB9297F205100D904CC /* CategoryAddView.swift */; };
+		470FADBC297F6BFA00D904CC /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470FADBB297F6BFA00D904CC /* Theme.swift */; };
+		470FADBE297F6D5C00D904CC /* ThemePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470FADBD297F6D5C00D904CC /* ThemePicker.swift */; };
+		470FADC0297F6D7200D904CC /* ThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470FADBF297F6D7200D904CC /* ThemeView.swift */; };
+		470FADC2297F710E00D904CC /* CategoryCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470FADC1297F710E00D904CC /* CategoryCardView.swift */; };
+		470FADC4297F894500D904CC /* CategoryEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470FADC3297F894500D904CC /* CategoryEditView.swift */; };
 		4769A345295E6FF70081D6E1 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4769A344295E6FF70081D6E1 /* Category.swift */; };
 		477DF600297EAE99004CEFA5 /* FooterToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477DF5FF297EAE99004CEFA5 /* FooterToolbar.swift */; };
 		477DF603297EAFF1004CEFA5 /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477DF602297EAFF1004CEFA5 /* CategoriesView.swift */; };
@@ -42,6 +48,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		470FADB9297F205100D904CC /* CategoryAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryAddView.swift; sourceTree = "<group>"; };
+		470FADBB297F6BFA00D904CC /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		470FADBD297F6D5C00D904CC /* ThemePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemePicker.swift; sourceTree = "<group>"; };
+		470FADBF297F6D7200D904CC /* ThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeView.swift; sourceTree = "<group>"; };
+		470FADC1297F710E00D904CC /* CategoryCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCardView.swift; sourceTree = "<group>"; };
+		470FADC3297F894500D904CC /* CategoryEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryEditView.swift; sourceTree = "<group>"; };
 		4769A344295E6FF70081D6E1 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		477DF5FF297EAE99004CEFA5 /* FooterToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterToolbar.swift; sourceTree = "<group>"; };
 		477DF602297EAFF1004CEFA5 /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
@@ -94,6 +106,7 @@
 				47ECFF5A2967B91100FDE50C /* CategoryValue.swift */,
 				47ECFF68296B730E00FDE50C /* CategoryStore.swift */,
 				47ECFF6C296C523400FDE50C /* ValueStore.swift */,
+				470FADBB297F6BFA00D904CC /* Theme.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -107,6 +120,10 @@
 				477DF604297EAFFB004CEFA5 /* UpdatesView.swift */,
 				477DF606297EB062004CEFA5 /* DataView.swift */,
 				477DF5FF297EAE99004CEFA5 /* FooterToolbar.swift */,
+				470FADB9297F205100D904CC /* CategoryAddView.swift */,
+				470FADBD297F6D5C00D904CC /* ThemePicker.swift */,
+				470FADBF297F6D7200D904CC /* ThemeView.swift */,
+				470FADC1297F710E00D904CC /* CategoryCardView.swift */,
 			);
 			path = v1.0;
 			sourceTree = "<group>";
@@ -138,6 +155,7 @@
 				479B39532956786500A394D4 /* ViewController.swift */,
 				479B392D2956770800A394D4 /* Assets.xcassets */,
 				479B392F2956770800A394D4 /* Preview Content */,
+				470FADC3297F894500D904CC /* CategoryEditView.swift */,
 			);
 			path = OnePercent;
 			sourceTree = "<group>";
@@ -297,14 +315,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				470FADC4297F894500D904CC /* CategoryEditView.swift in Sources */,
 				479B39542956786500A394D4 /* ViewController.swift in Sources */,
 				47ECFF69296B730E00FDE50C /* CategoryStore.swift in Sources */,
 				477DF607297EB062004CEFA5 /* DataView.swift in Sources */,
 				477DF603297EAFF1004CEFA5 /* CategoriesView.swift in Sources */,
+				470FADBA297F205100D904CC /* CategoryAddView.swift in Sources */,
 				477DF605297EAFFB004CEFA5 /* UpdatesView.swift in Sources */,
 				479B392A2956770700A394D4 /* OnePercentApp.swift in Sources */,
+				470FADC2297F710E00D904CC /* CategoryCardView.swift in Sources */,
 				4769A345295E6FF70081D6E1 /* Category.swift in Sources */,
+				470FADC0297F6D7200D904CC /* ThemeView.swift in Sources */,
 				47ECFF6D296C523400FDE50C /* ValueStore.swift in Sources */,
+				470FADBC297F6BFA00D904CC /* Theme.swift in Sources */,
+				470FADBE297F6D5C00D904CC /* ThemePicker.swift in Sources */,
 				477DF600297EAE99004CEFA5 /* FooterToolbar.swift in Sources */,
 				47ECFF5B2967B91100FDE50C /* CategoryValue.swift in Sources */,
 			);
