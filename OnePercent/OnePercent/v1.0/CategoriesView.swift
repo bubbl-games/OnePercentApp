@@ -21,7 +21,8 @@ struct CategoriesView: View {
                 else{
                     VStack {
                         ForEach(categories) { category in
-                            /*@START_MENU_TOKEN@*/Text(category.name)/*@END_MENU_TOKEN@*/
+                            CategoryCardView(category: category)
+                                .background(category.theme.mainColor)
                         }
                     }
                 }

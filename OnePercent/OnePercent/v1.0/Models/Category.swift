@@ -91,19 +91,19 @@ extension Category {
 
     static let firstSample: [Category] =
     [
-        Category(name: "Technical Growth", theme: .seafoam),
-        Category(name: "Job", theme:.bubblegum),
-        Category(name: "Diet", theme:.indigo),
-        Category(name: "Exercise", theme:.oxblood),
-        Category(name: "Sleep", theme:.tan)
+        Category(name: "Technical Growth", theme: .green),
+        Category(name: "Job", theme:.red),
+        Category(name: "Diet", theme:.cyan),
+        Category(name: "Exercise", theme:.orange),
+        Category(name: "Sleep", theme:.purple)
     ]
     
     static let secondSample: [Category] =
     [
-        Category(name: "Mental", theme:.teal),
-        Category(name: "Julie", theme:.periwinkle),
-        Category(name: "Social", theme:.poppy),
-        Category(name: "Financial", theme:.yellow),
-        Category(name: "Russian", theme:.orange)
+        Category(name: "Mental", theme:.pink),
+        Category(name: "Julie", theme:.yellow),
+        Category(name: "Social", theme:.indigo),
+        Category(name: "Financial", theme:.blue),
+        Category(name: "Russian", theme:.gray)
     ]
 }

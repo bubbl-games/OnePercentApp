@@ -10,7 +10,7 @@ import SwiftUI
 struct CategoryAddEditView: View {
     @Binding var categories:[Category]
     @Binding var isShowingEditSheet:Bool
-    @State var newCategory:Category = Category(name:"",theme:.navy)
+    @State var newCategory:Category = Category(name:"", theme:.red)
     
     
     var body: some View {

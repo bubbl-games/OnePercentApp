@@ -9,9 +9,7 @@ struct ThemeView: View {
     
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 4)
-                .fill(theme.mainColor)
-            Label(theme.name, systemImage: "paintpalette")
+            Text(theme.name)
                 .padding(4)
         }
         .foregroundColor(theme.accentColor)
@@ -21,6 +19,6 @@ struct ThemeView: View {
 
 struct ThemeView_Previews: PreviewProvider {
     static var previews: some View {
-        ThemeView(theme: .buttercup)
+        ThemeView(theme: .red)
     }
 }

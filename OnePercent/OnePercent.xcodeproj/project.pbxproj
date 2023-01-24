@@ -11,6 +11,7 @@
 		470FADBC297F6BFA00D904CC /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470FADBB297F6BFA00D904CC /* Theme.swift */; };
 		470FADBE297F6D5C00D904CC /* ThemePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470FADBD297F6D5C00D904CC /* ThemePicker.swift */; };
 		470FADC0297F6D7200D904CC /* ThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470FADBF297F6D7200D904CC /* ThemeView.swift */; };
+		470FADC2297F710E00D904CC /* CategoryCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470FADC1297F710E00D904CC /* CategoryCardView.swift */; };
 		4769A345295E6FF70081D6E1 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4769A344295E6FF70081D6E1 /* Category.swift */; };
 		477DF600297EAE99004CEFA5 /* FooterToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477DF5FF297EAE99004CEFA5 /* FooterToolbar.swift */; };
 		477DF603297EAFF1004CEFA5 /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477DF602297EAFF1004CEFA5 /* CategoriesView.swift */; };
@@ -50,6 +51,7 @@
 		470FADBB297F6BFA00D904CC /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		470FADBD297F6D5C00D904CC /* ThemePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemePicker.swift; sourceTree = "<group>"; };
 		470FADBF297F6D7200D904CC /* ThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeView.swift; sourceTree = "<group>"; };
+		470FADC1297F710E00D904CC /* CategoryCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCardView.swift; sourceTree = "<group>"; };
 		4769A344295E6FF70081D6E1 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		477DF5FF297EAE99004CEFA5 /* FooterToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterToolbar.swift; sourceTree = "<group>"; };
 		477DF602297EAFF1004CEFA5 /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				470FADB9297F205100D904CC /* CategoryAddEditView.swift */,
 				470FADBD297F6D5C00D904CC /* ThemePicker.swift */,
 				470FADBF297F6D7200D904CC /* ThemeView.swift */,
+				470FADC1297F710E00D904CC /* CategoryCardView.swift */,
 			);
 			path = v1.0;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				470FADBA297F205100D904CC /* CategoryAddEditView.swift in Sources */,
 				477DF605297EAFFB004CEFA5 /* UpdatesView.swift in Sources */,
 				479B392A2956770700A394D4 /* OnePercentApp.swift in Sources */,
+				470FADC2297F710E00D904CC /* CategoryCardView.swift in Sources */,
 				4769A345295E6FF70081D6E1 /* Category.swift in Sources */,
 				470FADC0297F6D7200D904CC /* ThemeView.swift in Sources */,
 				47ECFF6D296C523400FDE50C /* ValueStore.swift in Sources */,
