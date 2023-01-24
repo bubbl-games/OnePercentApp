@@ -10,6 +10,8 @@ import SwiftUI
 struct CategoriesView: View {
     @State var categories: [Category]
     @State private var isShowingEditSheet = false
+    @State private var isEditing = false
+    @State private var indexToUpdate:Int = 0
     
     var body: some View {
         NavigationView{
@@ -20,8 +22,12 @@ struct CategoriesView: View {
                 }
                 else{
                     List {
-                        ForEach(categories) { category in
-                            CategoryCardView(category: category)
+                        ForEach(categories.indices, id: \.self) { index in
+                            CategoryCardView(category: categories[index],
+                                             isShowingEditSheet: $isShowingEditSheet,
+                                             isEditing: $isEditing,
+                                             indexToUpdate: $indexToUpdate,
+                                             index: index)
                         }
                         .onMove(perform: move)
                     }
@@ -36,7 +42,12 @@ struct CategoriesView: View {
                 }
             }
             .sheet(isPresented: $isShowingEditSheet) {
-                CategoryAddEditView(categories: $categories, isShowingEditSheet: $isShowingEditSheet)
+                if (isEditing){
+                    CategoryEditView(categories: $categories, isShowingEditSheet: $isShowingEditSheet, updatingCategory: categories[indexToUpdate], index: indexToUpdate)
+                }
+                else{
+                    CategoryAddView(categories: $categories, isShowingEditSheet: $isShowingEditSheet)
+                }
             }
             
         }

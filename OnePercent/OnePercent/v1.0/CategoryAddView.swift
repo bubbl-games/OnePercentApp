@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CategoryAddEditView: View {
+struct CategoryAddView: View {
     @Binding var categories:[Category]
     @Binding var isShowingEditSheet:Bool
     @State var newCategory:Category = Category(name:"", theme:.red)
@@ -29,7 +29,6 @@ struct CategoryAddEditView: View {
                 }
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Add"){
-                        //todo: add element to list
                         categories.append(newCategory)
                         isShowingEditSheet = false
                     }
@@ -39,8 +38,8 @@ struct CategoryAddEditView: View {
     }
 }
 
-struct CategoryAddEditView_Previews: PreviewProvider {
+struct CategoryAddView_Previews: PreviewProvider {
     static var previews: some View {
-        CategoryAddEditView(categories:.constant(Category.firstSample), isShowingEditSheet: .constant(true))
+        CategoryAddView(categories:.constant(Category.firstSample), isShowingEditSheet: .constant(true))
     }
 }
