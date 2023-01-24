@@ -8,13 +8,17 @@
 import SwiftUI
 
 struct UpdatesView: View {
+    @Binding var categories: [Category]
     var body: some View {
-        Text("Updates")
+        if (categories.count == 0){
+            Text("Set up categories to start")
+                .font(.headline)
+        }
     }
 }
 
 struct UpdatesView_Previews: PreviewProvider {
     static var previews: some View {
-        UpdatesView()
+        UpdatesView(categories: .constant([]))
     }
 }
