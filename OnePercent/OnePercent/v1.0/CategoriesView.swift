@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CategoriesView: View {
-    var categories: [Category]
+    @State var categories: [Category]
     @State private var isShowingEditSheet = false
     
     var body: some View {
@@ -27,14 +27,20 @@ struct CategoriesView: View {
                 }
             }
             .toolbar {
-                Button(action: {}){
-                    Image(systemName: "plus")
+                if (categories.count < 10) {
+                    Button(action: {isShowingEditSheet = true}){
+                        Image(systemName: "plus")
+                    }
                 }
+            }
+            .sheet(isPresented: $isShowingEditSheet) {
+                CategoryAddEditView(categories: $categories, isShowingEditSheet: $isShowingEditSheet)
             }
         }
         
     }
 }
+
 
 struct CategoriesView_Previews: PreviewProvider {
     static var previews: some View {
