@@ -20,7 +20,6 @@ struct CategoryCardView: View {
             }
             Spacer()
         }
-        .cornerRadius(5)
         .padding(2)
         .foregroundColor(category.theme.accentColor)
         .background(category.theme.mainColor)
