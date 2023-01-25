@@ -16,7 +16,7 @@ struct UpdatesView: View {
         }
         else {
             VStack {
-                ForEach(categories) { category in
+                ForEach($categories) { category in
                     UpdateCardView(category: category)
                 }
             }
