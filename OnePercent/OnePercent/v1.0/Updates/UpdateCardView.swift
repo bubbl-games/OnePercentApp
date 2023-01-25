@@ -13,6 +13,8 @@ struct UpdateCardView: View {
         HStack{
             Text(category.name)
                 .foregroundColor(category.theme.mainColor)
+            Text(getNextDateString(categoryValues: category.values))
+                .foregroundColor(category.theme.mainColor)
             Spacer()
             Button(action: {
                 category.values.append(createCategoryValue(
@@ -55,6 +57,25 @@ struct UpdateCardView: View {
                 .stroke(category.theme.mainColor, lineWidth: 2)
         )
     }
+}
+func getNextDateString (categoryValues: [CategoryValue]) -> String {
+    
+    if (categoryValues.count == 0){
+        return dateToMonthDayString(date: Date())
+    }
+    else {
+        return dateToMonthDayString(date: categoryValues.last!.date)
+    }
+}
+
+
+func dateToMonthDayString(date: Date) -> String {
+    let formatter = DateFormatter()
+    formatter.dateFormat = "MM"
+    let month = formatter.string(from: date)
+    formatter.dateFormat = "dd"
+    let day = formatter.string(from: date)
+    return String(month) + "/" + String(day)
 }
 
 func createCategoryValue (categoryValues: [CategoryValue], delta: Int) -> CategoryValue {
