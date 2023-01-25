@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CategoriesView: View {
-    @State var categories: [Category]
+    @Binding var categories: [Category]
     @State private var isShowingEditSheet = false
     @State private var isEditing = false
     @State private var indexToUpdate:Int = 0
@@ -64,6 +64,6 @@ struct CategoriesView: View {
 
 struct CategoriesView_Previews: PreviewProvider {
     static var previews: some View {
-        CategoriesView(categories: [])
+        CategoriesView(categories: .constant(Category.firstSample))
     }
 }
