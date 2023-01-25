@@ -9,9 +9,10 @@ import SwiftUI
 import Charts
 
 struct DataView: View {
-    @State var isGraph:Bool = true
+    @State var isGraph:Bool = false
     var categories: [Category]
     @State private var lastDateOfInterest = Date(timeIntervalSince1970: 0)
+    @State private var weekMonthQuarter = 1
     
     var body: some View {
         if (categories.count == 0){
@@ -20,22 +21,23 @@ struct DataView: View {
         }
         else{
             VStack{
+                Spacer()
                 HStack{
-                    Button(action: {lastDateOfInterest = Calendar.current.date(byAdding: .day, value: -7, to: Date())!}){
+                    Button(action: {lastDateOfInterest = Calendar.current.date(byAdding: .day, value: -7, to: Date())!; weekMonthQuarter = 1}){
                         Text("Week")
                     }
                     .padding()
                     .foregroundColor(.white)
                     .background(.black)
                     .cornerRadius(10)
-                    Button(action: {lastDateOfInterest = Calendar.current.date(byAdding: .month, value: -1, to: Date())!}){
+                    Button(action: {lastDateOfInterest = Calendar.current.date(byAdding: .month, value: -1, to: Date())!; weekMonthQuarter = 2}){
                         Text("Month")
                     }
                     .padding()
                     .foregroundColor(.white)
                     .background(.black)
                     .cornerRadius(10)
-                    Button(action: {lastDateOfInterest = Calendar.current.date(byAdding: .month, value: -3, to: Date())!}){
+                    Button(action: {lastDateOfInterest = Calendar.current.date(byAdding: .month, value: -3, to: Date())!; weekMonthQuarter = 3}){
                         Text("Quarter")
                     }
                     .padding()
@@ -48,7 +50,7 @@ struct DataView: View {
                     GraphsView(chartData: MapFromCategories(categories: categories, lastDateOfInterest: lastDateOfInterest))
                 }
                 else{
-                    
+                    GridView(categories: categories, weekMonthQuarter: weekMonthQuarter)
                 }
                 Spacer()
                 Button(action:{isGraph = !isGraph}){
@@ -67,6 +69,7 @@ struct DataView: View {
                             .cornerRadius(12)
                     }
                 }
+                Spacer()
             }
 
         }
