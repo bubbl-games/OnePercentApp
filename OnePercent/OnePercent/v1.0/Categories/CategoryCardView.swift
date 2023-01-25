@@ -21,23 +21,28 @@ struct CategoryCardView: View {
                 isEditing = true
                 indexToUpdate = index
             }){
-                Label("", systemImage: "pencil")
+                Image(systemName: "pencil")
+                    .padding()
+                    .foregroundColor(category.theme.mainColor)
             }
-            VStack {
+            VStack(alignment: .leading) {
                 Text("Name: " + category.name)
                 Text("Color: " + category.theme.name)
             }
+            .foregroundColor(category.theme.mainColor)
             Spacer()
         }
-        .padding(2)
-        .foregroundColor(category.theme.accentColor)
-        .background(category.theme.mainColor)
+        .padding(12)
+        .frame(width: 280)
+        .overlay(
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(category.theme.mainColor, lineWidth: 2)
+        )
     }
 }
 
 struct CategoryCardView_Previews: PreviewProvider {
     static var previews: some View {
         CategoryCardView(category: Category.firstSample[0], isShowingEditSheet: .constant(false), isEditing: .constant(false), indexToUpdate: .constant(0), index: 0)
-            .background(Category.firstSample[0].theme.mainColor)
     }
 }

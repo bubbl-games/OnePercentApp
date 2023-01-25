@@ -14,11 +14,18 @@ struct UpdatesView: View {
             Text("Set up categories to start")
                 .font(.headline)
         }
+        else {
+            VStack {
+                ForEach(categories) { category in
+                    UpdateCardView(category: category)
+                }
+            }
+        }
     }
 }
 
 struct UpdatesView_Previews: PreviewProvider {
     static var previews: some View {
-        UpdatesView(categories: .constant([]))
+        UpdatesView(categories: .constant(Category.firstSample))
     }
 }
