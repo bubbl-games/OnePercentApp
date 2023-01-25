@@ -22,7 +22,7 @@ struct OnePercentApp: App {
                     UpdatesView(categories: $categoryStore.categories)
                 }
                 else{
-                    DataView()
+                    DataView(categories: categoryStore.categories)
                 }
             }
             .toolbar {
