@@ -43,7 +43,7 @@ struct CategoriesView: View {
             }
             .sheet(isPresented: $isShowingEditSheet) {
                 if (isEditing){
-                    CategoryEditView(categories: $categories, isShowingEditSheet: $isShowingEditSheet, updatingCategory: categories[indexToUpdate], index: indexToUpdate)
+                    CategoryEditView(categories: $categories, isShowingEditSheet: $isShowingEditSheet, updatingCategory: categories[indexToUpdate], isEditing: $isEditing, index: indexToUpdate)
                 }
                 else{
                     CategoryAddView(categories: $categories, isShowingEditSheet: $isShowingEditSheet)
