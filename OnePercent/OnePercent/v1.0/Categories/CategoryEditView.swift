@@ -12,6 +12,7 @@ struct CategoryEditView: View {
     @Binding var categories:[Category]
     @Binding var isShowingEditSheet:Bool
     @State var updatingCategory:Category
+    @Binding var isEditing:Bool
     var index:Int
     
     
@@ -27,12 +28,14 @@ struct CategoryEditView: View {
                 ToolbarItem(placement: .cancellationAction) {
                     Button("Dismiss"){
                         isShowingEditSheet = false
+                        isEditing = false
                     }
                 }
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Save"){
                         categories[index].update(from: updatingCategory)
                         isShowingEditSheet = false
+                        isEditing = false
                     }
                 }
             }
@@ -42,6 +45,6 @@ struct CategoryEditView: View {
 
 struct CategoryEditView_Previews: PreviewProvider {
     static var previews: some View {
-        CategoryEditView(categories:.constant(Category.firstSample), isShowingEditSheet: .constant(true), updatingCategory: Category.firstSample[0], index: 0)
+        CategoryEditView(categories:.constant(Category.firstSample), isShowingEditSheet: .constant(true), updatingCategory: Category.firstSample[0], isEditing: .constant(false)  c, index: 0)
     }
 }
