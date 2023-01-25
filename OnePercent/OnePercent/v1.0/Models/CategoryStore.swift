@@ -16,7 +16,7 @@ class CategoryStore: ObservableObject {
                                        in: .userDomainMask,
                                        appropriateFor: nil,
                                        create: false)
-            .appendingPathComponent("categories.data")
+            .appendingPathComponent("categories_v1.0.data")
     }
     
     static func load(completion: @escaping (Result<[Category], Error>)->Void) {
