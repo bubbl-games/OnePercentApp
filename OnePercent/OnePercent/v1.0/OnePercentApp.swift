@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct OnePercentApp: App {
-//    @StateObject private var categoryStore = CategoryStore()
+    @StateObject private var categoryStore = CategoryStore()
 //    @StateObject private var valueStore = ValueStore()
     
     @State private var viewType = 1
@@ -47,25 +47,16 @@ struct OnePercentApp: App {
 //                TableView(categories: categoryStore.categories,
 //                            values: valueStore.values)
 //            }
-//            .onAppear {
-//                CategoryStore.load { result in
-//                    switch result {
-//                    case .failure(let error):
-//                        fatalError(error.localizedDescription)
-//                    case .success(let categories):
-//                        categoryStore.categories = categories
-//                    }
-//                }
-//
-//                ValueStore.load { result in
-//                    switch result {
-//                    case .failure(let error):
-//                        fatalError(error.localizedDescription)
-//                    case .success(let values):
-//                        valueStore.values = values
-//                    }
-//                }
-//            }
+            .onAppear {
+                CategoryStore.load { result in
+                    switch result {
+                    case .failure(let error):
+                        fatalError(error.localizedDescription)
+                    case .success(let categories):
+                        categoryStore.categories = categories
+                    }
+                }
+            }
             
         }
     }

@@ -12,11 +12,13 @@ struct Category: Identifiable, Codable {
     let id: UUID
     var name: String
     var theme: Theme
+    var values: [CategoryValue]
     
-    init(id: UUID = UUID(), name: String, theme: Theme) {
+    init(id: UUID = UUID(), name: String, theme: Theme, values: [CategoryValue]) {
         self.id = id
         self.name = name
         self.theme = theme
+        self.values = values
     }
     
     mutating func update(from category: Category) {
@@ -91,19 +93,19 @@ extension Category {
 
     static let firstSample: [Category] =
     [
-        Category(name: "Technical Growth", theme: .green),
-        Category(name: "Job", theme:.red),
-        Category(name: "Diet", theme:.cyan),
-        Category(name: "Exercise", theme:.orange),
-        Category(name: "Sleep", theme:.purple)
+        Category(name: "Technical Growth", theme: .green, values: Category.technicalGrowthData),
+        Category(name: "Job", theme:.red, values: Category.jobData),
+        Category(name: "Diet", theme:.cyan, values: Category.dietData),
+        Category(name: "Exercise", theme:.orange, values: Category.exerciseData),
+        Category(name: "Sleep", theme:.purple, values: Category.sleepData)
     ]
     
     static let secondSample: [Category] =
     [
-        Category(name: "Mental", theme:.pink),
-        Category(name: "Julie", theme:.yellow),
-        Category(name: "Social", theme:.indigo),
-        Category(name: "Financial", theme:.blue),
-        Category(name: "Russian", theme:.gray)
+        Category(name: "Mental", theme:.pink, values: Category.mentalData),
+        Category(name: "Julie", theme:.yellow, values: Category.julieData),
+        Category(name: "Social", theme:.indigo, values: Category.socialData),
+        Category(name: "Financial", theme:.blue, values: Category.financialData),
+        Category(name: "Russian", theme:.gray, values: Category.russianData)
     ]
 }
