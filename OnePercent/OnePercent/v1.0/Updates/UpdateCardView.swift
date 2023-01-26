@@ -27,6 +27,7 @@ struct UpdateCardView: View {
             .padding(8)
             .background(.green)
             .cornerRadius(10)
+            .disabled(ShouldBeDisabled(categoryValues: category.values))
             Button(action: {
                 category.values.append(createCategoryValue(
                     categoryValues: category.values,
@@ -38,6 +39,7 @@ struct UpdateCardView: View {
             .padding(8)
             .background(.red)
             .cornerRadius(10)
+            .disabled(ShouldBeDisabled(categoryValues: category.values))
             Button(action: {
                 if (category.values.count > 0){
                     category.values.remove(at: category.values.count - 1)
@@ -65,6 +67,18 @@ func getNextDateString (categoryValues: [CategoryValue]) -> String {
     }
     else {
         return dateToMonthDayString(date: categoryValues.last!.date)
+    }
+}
+
+func ShouldBeDisabled (categoryValues: [CategoryValue]) -> Bool {
+    if (categoryValues.count == 0){
+        return false
+    }
+    else if (Calendar.current.isDate(categoryValues.last!.date, equalTo: Date(), toGranularity: .day)){
+        return true;
+    }
+    else {
+        return false
     }
 }
 
