@@ -45,6 +45,6 @@ struct CategoryEditView: View {
 
 struct CategoryEditView_Previews: PreviewProvider {
     static var previews: some View {
-        CategoryEditView(categories:.constant(Category.firstSample), isShowingEditSheet: .constant(true), updatingCategory: Category.firstSample[0], isEditing: .constant(false)  c, index: 0)
+        CategoryEditView(categories:.constant(Category.firstSample), isShowingEditSheet: .constant(true), updatingCategory: Category.firstSample[0], isEditing: .constant(false), index: 0)
     }
 }
