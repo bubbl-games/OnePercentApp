@@ -47,7 +47,10 @@ struct DataView: View {
                 }
                 Spacer()
                 if (isGraph){
-                    GraphsView(chartData: MapFromCategories(categories: categories, lastDateOfInterest: lastDateOfInterest))
+                    let currentGraphData = MapFromCategories(categories: categories, lastDateOfInterest: lastDateOfInterest)
+                    let minValue = currentGraphData.count == 0 ? 80 : currentGraphData.min{a, b in a.value < b.value}!.value - 5
+                    let maxValue = currentGraphData.count == 0 ? 120 : currentGraphData.max{a, b in a.value < b.value}!.value + 5
+                    GraphsView(chartData: currentGraphData, categories: categories, minValue: minValue, maxValue: maxValue)
                 }
                 else{
                     GridView(categories: categories, weekMonthQuarter: weekMonthQuarter)

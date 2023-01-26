@@ -12,21 +12,24 @@ struct GridView: View {
     var weekMonthQuarter:Int = 3
     
     var body: some View {
-        Grid(alignment: .topLeading,
-        horizontalSpacing: 50) {
+        Grid(alignment: .topLeading) {
             GridRow {
+                Text("Change Since")
                 if (weekMonthQuarter == 1){
-                    Text("Weekly Changes")
+                    Text(dateToMonthDayString(date: Calendar.current.date(byAdding: .day, value: -7 * 1, to: Date())!))
+                    Text(dateToMonthDayString(date: Calendar.current.date(byAdding: .day, value: -7 * 2, to: Date())!))
+                    Text(dateToMonthDayString(date: Calendar.current.date(byAdding: .day, value: -7 * 3, to: Date())!))
                 }
                 else if(weekMonthQuarter == 2){
-                    Text("Monthly Changes")
+                    Text(dateToMonthDayString(date: Calendar.current.date(byAdding: .month, value: -1, to: Date())!))
+                    Text(dateToMonthDayString(date: Calendar.current.date(byAdding: .month, value: -2, to: Date())!))
+                    Text(dateToMonthDayString(date: Calendar.current.date(byAdding: .month, value: -3, to: Date())!))
                 }
                 else {
-                    Text("Quarterly Changes")
+                    Text(dateToMonthDayString(date: Calendar.current.date(byAdding: .month, value: -3, to: Date())!))
+                    Text(dateToMonthDayString(date: Calendar.current.date(byAdding: .month, value: -6, to: Date())!))
+                    Text(dateToMonthDayString(date: Calendar.current.date(byAdding: .month, value: -9, to: Date())!))
                 }
-                Image(systemName: "1.circle")
-                Image(systemName: "2.circle")
-                Image(systemName: "3.circle")
             }
             ForEach(categories) { category in
                 Divider()
