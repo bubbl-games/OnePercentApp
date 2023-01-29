@@ -22,12 +22,13 @@ struct CategoryCardView: View {
                 indexToUpdate = index
             }){
                 Image(systemName: "pencil")
-                    .padding()
                     .foregroundColor(category.theme.mainColor)
+                    .padding(.trailing)
             }
-            VStack(alignment: .leading) {
-                Text("Name: " + category.name)
-                Text("Color: " + category.theme.name)
+            HStack {
+                Text(category.name)
+                Image(systemName: "circle.fill")
+                    .foregroundColor(category.theme.mainColor)
             }
             .foregroundColor(category.theme.mainColor)
             Spacer()

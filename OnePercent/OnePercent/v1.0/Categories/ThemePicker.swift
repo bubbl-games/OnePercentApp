@@ -20,7 +20,6 @@ struct ThemePicker: View {
                         .tag(theme)
                 }
             }
-            
         }
         
     }
