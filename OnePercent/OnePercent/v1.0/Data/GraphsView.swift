@@ -22,7 +22,7 @@ struct GraphsView: View {
            .foregroundStyle(by: .value("Name", $0.name))
            .interpolationMethod(.catmullRom)
        }
-       .frame(width: 330, height: 200)
+       .frame(width: 330, height: 500)
        .chartYScale(domain: minValue...maxValue)
        .chartForegroundStyleScale(CreateLineStyleDictionary(categories: categories))
     }

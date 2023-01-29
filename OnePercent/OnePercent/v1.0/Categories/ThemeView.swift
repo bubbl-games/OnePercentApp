@@ -9,10 +9,11 @@ struct ThemeView: View {
     
     var body: some View {
         ZStack {
-            Text(theme.name)
-                .padding(4)
+            HStack {
+                Text(theme.name)
+                    .padding(4)
+            }
         }
-        .foregroundColor(theme.accentColor)
         .fixedSize(horizontal: false, vertical: true)
     }
 }
